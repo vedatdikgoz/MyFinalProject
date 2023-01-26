@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+      <TargetFramework>net6.0</TargetFramework>
+	  <Nullable>enable</Nullable>
+	  <ImplicitUsings>enable</ImplicitUsings>
+	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <IsPackable>True</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.6" />
+	  <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />  
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Condition="'$(Configuration)'=='Debug'" Include="..\Business\Business.csproj" />
+    <ProjectReference Condition="'$(Configuration)'=='Debug'" Include="..\Core\Core.csproj" />
+    <ProjectReference Condition="'$(Configuration)'=='Debug'" Include="..\DataAccess\DataAccess.csproj" />
+    <ProjectReference Condition="'$(Configuration)'=='Debug'" Include="..\Entities\Entities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="logs\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+
+</Project>
