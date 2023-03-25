@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
 {
+    //authcontroller
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : Controller
